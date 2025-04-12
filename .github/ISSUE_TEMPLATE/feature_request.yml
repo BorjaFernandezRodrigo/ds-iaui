@@ -40,14 +40,6 @@ body:
       validations:
           required: true
 
-    - type: checkboxes
-      id: terms
-      attributes:
-          label: ✅ Confirmación
-          options:
-              - label: He verificado que no existe una propuesta similar
-                required: true
-
     - type: textarea
       id: mockups
       attributes:
