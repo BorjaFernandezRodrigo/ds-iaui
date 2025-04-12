@@ -1,55 +1,82 @@
-# 📝 Descripción del Pull Request
+# 🚀 Pull Request
 
-## Tipo de cambio
+## 📝 Descripción
+<!-- Proporciona un resumen conciso de los cambios -->
 
-Por favor, marca el tipo de cambio que introduces:
+## 🔍 Tipo de Cambio
+<!-- Marca con [x] las opciones que apliquen -->
 
-- [ ] 🐛 Bug fix (cambio que soluciona un issue)
-- [ ] ✨ Nueva feature (cambio que agrega nueva funcionalidad)
-- [ ] 💥 Breaking change (cambio que causa que funcionalidad existente no funcione)
-- [ ] 📚 Documentación (cambios o adiciones a la documentación)
-- [ ] 🔧 Deuda técnica (mejoras técnicas sin cambios funcionales)
+- [ ] ✨ Nueva característica
+- [ ] 🐛 Corrección de error
+- [ ] 📚 Documentación
+- [ ] ♻️ Refactorización
+- [ ] 🎨 Estilo
+- [ ] ⚡ Mejora de rendimiento
+- [ ] 🔒 Seguridad
+- [ ] 🔧 Deuda técnica
 
-## Issue relacionado
+## 🔗 Issue Relacionado
 
-Fixes #(número_del_issue)
+Closes #<!-- número del issue -->
 
-## 🧪 Pruebas realizadas
+## 💡 Solución Implementada
+<!-- Describe brevemente cómo has implementado la solución -->
 
-Describe las pruebas que has realizado:
+## 🧪 Pruebas Realizadas
+<!-- Marca las pruebas que has completado -->
 
-- [ ] Test unitarios
-- [ ] Test de integración
-- [ ] Test de UI
-- [ ] Test manuales
+- [ ] ✅ Tests unitarios
+- [ ] 🔄 Tests de integración
+- [ ] 🖥️ Tests de UI
+- [ ] 👤 Tests manuales
 
-## 📸 Screenshots
+<details>
+<summary>📋 Detalles de las pruebas</summary>
 
-Si aplicable, añade screenshots para ayudar a explicar tus cambios.
+```bash
+# Añade aquí los resultados de las pruebas
+```
 
-## ✅ Checklist
+</details>
 
-- [ ] He realizado una auto-revisión de mi código
-- [ ] He comentado mi código, especialmente en áreas complejas
-- [ ] He actualizado la documentación correspondiente
-- [ ] He añadido tests que prueban que mi fix/feature funciona
-- [ ] Los tests nuevos y existentes pasan localmente
-- [ ] Los cambios generan mejoras de rendimiento
-- [ ] He actualizado el CHANGELOG.md si es necesario
+## 📸 Evidencias
+<!-- Añade screenshots, GIFs o videos que demuestren los cambios -->
 
-## 📋 Notas adicionales
+<details>
+<summary>Ver capturas</summary>
 
-Añade cualquier otra información sobre el PR aquí.
+<!-- Arrastra tus imágenes aquí -->
+
+</details>
+
+## ✅ Checklist de Calidad
+<!-- Marca todas las que apliquen -->
+
+- [ ] 🔍 Auto-revisión del código completada
+- [ ] 💭 Código comentado en áreas complejas
+- [ ] 📖 Documentación actualizada
+- [ ] ✅ Tests añadidos/actualizados
+- [ ] 🏃 Tests pasan localmente
+- [ ] 📈 Mejoras de rendimiento verificadas
+- [ ] 📝 CHANGELOG.md actualizado
+
+## 📊 Impacto del Cambio
+
+| Área | Impacto | Detalles |
+|------|---------|-----------|
+| 🚀 Rendimiento | Alto/Medio/Bajo | <!-- detalles --> |
+| 🔒 Seguridad | Alto/Medio/Bajo | <!-- detalles --> |
+| 🎨 UX | Alto/Medio/Bajo | <!-- detalles --> |
+| 🔧 Mantenibilidad | Alto/Medio/Bajo | <!-- detalles --> |
 
 ## 👥 Revisores
-
+<!-- @menciona a los revisores sugeridos -->
 - @BorjaFernandezRodrigo
 
-## 📊 Impacto del cambio
+## 📌 Notas Adicionales
+<!-- Cualquier información adicional relevante -->
 
-Describe el impacto que tendrá este cambio:
-
-- Rendimiento:
-- Seguridad:
-- UX:
-- Mantenibilidad:
+---
+<div align="center">
+📣 ¿Preguntas? ¿Comentarios? ¡Déjalos arriba! 👆
+</div>
