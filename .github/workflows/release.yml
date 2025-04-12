@@ -1,23 +1,22 @@
-name: Build
-on: [push, pull_request]
+name: CI
+on:
+    push:
+        branches:
+            - main
+            - release/*
+    pull_request:
+        branches:
+            - main
+            - release/*
 
 jobs:
-    build:
-        needs: [install]
+    install:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node-version: [18.x]
-
+                node-version: [18.x, 20.x, 22.x]
         steps:
             - uses: actions/checkout@v4
-
-            - uses: actions/cache@v3
-              with:
-                  path: |
-                      **/node_modules
-                      ~/.npm
-                  key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
             - name: Setup Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
@@ -26,15 +25,16 @@ jobs:
                   cache: 'npm'
 
             - name: Install dependencies
+              if: steps.cache-deps.outputs.cache-hit != 'true'
               run: npm ci
+
+            - name: Lint
+              run: npm run lint
+
+            - name: Type check
+              run: npm run typecheck
 
             - name: Build
               run: npm run build
               env:
                   CI: true
-
-            - name: Upload build artifacts
-              uses: actions/upload-artifact@v3
-              with:
-                  name: dist
-                  path: dist/
