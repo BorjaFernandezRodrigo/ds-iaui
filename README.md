@@ -86,5 +86,5 @@ Las contribuciones son siempre bienvenidas. Por favor, lee nuestras [guías de c
 ---
 
 <div align="center">
-Desarrollado con ❤️ por el equipo de DsIaui
+Desarrollado con ❤️ por el equipo de Desenrola
 </div>
