@@ -1,45 +1,88 @@
-name: 🔧 Technical Debt
-description: Reportar deuda técnica
-title: '[TECH-DEBT]: '
-labels: ['technical-debt']
+name: 🔧 Deuda Técnica
+description: Reportar problemas técnicos que necesitan ser abordados
+title: '[TECH]: '
+labels: ['🛠️ technical-debt']
 assignees: ['dev-team']
 
 body:
     - type: markdown
       attributes:
           value: |
-              Use esta plantilla para reportar deuda técnica que necesita ser abordada.
+              ## 🔍 Reporte de Deuda Técnica
+              Por favor, proporciona los detalles del problema técnico que has identificado.
 
     - type: textarea
       id: description
       attributes:
-          label: Descripción
-          description: Describe el problema técnico
-          placeholder: 'El código actual tiene problemas con...'
+          label: 📝 Descripción
+          description: Explica el problema técnico en detalle
+          placeholder: |
+              - ¿Qué parte del código está afectada?
+              - ¿Cuál es el problema específico?
+              - ¿Por qué es un problema?
       validations:
           required: true
 
     - type: textarea
       id: impact
       attributes:
-          label: Impacto
-          description: ¿Qué impacto tiene este problema?
+          label: 💥 Impacto
+          description: ¿Cómo afecta esto al proyecto?
+          placeholder: |
+              - Rendimiento
+              - Mantenibilidad
+              - Escalabilidad
+              - Seguridad
       validations:
           required: true
 
     - type: dropdown
       id: severity
       attributes:
-          label: Severidad
+          label: 🎯 Severidad
           options:
-              - Baja (puede esperar)
-              - Media (debería abordarse pronto)
-              - Alta (necesita atención inmediata)
+              - 🟢 Baja (puede esperar)
+              - 🟡 Media (debería abordarse pronto)
+              - 🔴 Alta (necesita atención inmediata)
+      validations:
+          required: true
+
+    - type: dropdown
+      id: area
+      attributes:
+          label: 🔍 Área Afectada
+          multiple: true
+          options:
+              - 📚 Documentación
+              - 🧪 Tests
+              - 🔒 Seguridad
+              - 🎭 UX/UI
       validations:
           required: true
 
     - type: textarea
       id: solution
       attributes:
-          label: Solución propuesta
-          description: Si tienes una idea de cómo resolver esto, descríbela
+          label: 💡 Solución Propuesta
+          description: ¿Tienes alguna idea de cómo resolver esto?
+          placeholder: |
+              - Pasos propuestos para la solución
+              - Recursos necesarios
+              - Tiempo estimado
+
+    - type: input
+      id: contact
+      attributes:
+          label: 📞 Información de contacto
+          description: ¿Cómo podemos contactarte si necesitamos más información?
+          placeholder: 'ej. email@example.com'
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          label: ✅ Confirmación
+          options:
+              - label: He verificado que no existe un reporte similar
+                required: true
+              - label: Este problema afecta al código actual en producción
+                required: true

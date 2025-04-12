@@ -1,38 +1,81 @@
-name: 📝 Documentation
-description: Mejoras en documentación
+name: 📚 Documentación
+description: Proponer mejoras en la documentación
 title: '[DOCS]: '
-labels: ['documentation']
+labels: ['📝 documentation']
 
 body:
     - type: markdown
       attributes:
           value: |
-              Gracias por ayudar a mejorar nuestra documentación.
+              ## ✨ Mejora de Documentación
+              ¡Gracias por ayudarnos a mejorar nuestra documentación! Por favor, completa los siguientes detalles.
 
     - type: dropdown
       id: type
       attributes:
-          label: Tipo de cambio
+          label: 📋 Tipo de Cambio
           options:
-              - Nueva documentación
-              - Corrección de errores
-              - Actualización
-              - Traducción
-              - Otro
+              - 📝 Nueva documentación
+              - 🐛 Corrección de errores
+              - 🔄 Actualización
+              - 🌍 Traducción
+              - 🎯 Otro
       validations:
           required: true
 
     - type: textarea
       id: description
       attributes:
-          label: Descripción del cambio
-          description: Describe qué cambios propones en la documentación
+          label: 📄 Descripción del Cambio
+          description: Describe detalladamente qué cambios propones
+          placeholder: |
+              - ¿Qué información falta o necesita ser actualizada?
+              - ¿Por qué este cambio es necesario?
+              - ¿Qué beneficio aportará este cambio?
       validations:
           required: true
 
     - type: input
       id: location
       attributes:
-          label: Ubicación
+          label: 📍 Ubicación
           description: ¿Dónde se encuentra la documentación que quieres modificar?
           placeholder: 'docs/api/endpoints.md'
+      validations:
+          required: true
+
+    - type: dropdown
+      id: audience
+      attributes:
+          label: 👥 Audiencia Objetivo
+          description: ¿A quién va dirigida esta documentación?
+          options:
+              - 👨‍💻 Desarrolladores
+              - 🎨 Diseñadores
+              - 👥 Usuarios finales
+              - 📊 Analistas
+              - 🤝 Colaboradores
+      validations:
+          required: true
+
+    - type: textarea
+      id: proposal
+      attributes:
+          label: 💡 Propuesta
+          description: Si tienes un borrador o ejemplo del contenido, compártelo aquí
+          placeholder: |
+              ```markdown
+              # Título propuesto
+              ## Subtítulo
+              Contenido de ejemplo...
+              ```
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          label: ✅ Confirmación
+          options:
+              - label: He verificado que no existe una propuesta similar
+                required: true
+              - label: He revisado las guías de estilo de la documentación
+                required: true

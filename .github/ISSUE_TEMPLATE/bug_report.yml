@@ -1,68 +1,114 @@
 name: 🐛 Bug Report
-description: Reportar un error o problema
+description: Reportar un error o problema en la aplicación
 title: '[BUG]: '
-labels: ['bug', 'triage']
+labels: ['🐛 bug', '🔍 triage']
 assignees: ['tech-lead']
 
 body:
     - type: markdown
       attributes:
           value: |
-              Gracias por reportar este bug. Por favor, completa la siguiente información.
+              ## 🚨 Reporte de Bug
+              Gracias por ayudarnos a mejorar DsIaui. Por favor, proporciona la siguiente información para ayudarnos a resolver el problema.
 
     - type: textarea
       id: description
       attributes:
-          label: Descripción del Bug
-          description: Describe claramente cuál es el problema
-          placeholder: 'Cuando intento hacer X, sucede Y...'
+          label: 📝 Descripción del Bug
+          description: Describe claramente cuál es el problema que has encontrado
+          placeholder: |
+              💡 Tip: Una buena descripción incluye:
+              - ¿Qué estabas intentando hacer?
+              - ¿Qué salió mal?
+              - ¿Cómo afecta esto tu trabajo?
       validations:
           required: true
 
     - type: textarea
       id: reproduction
       attributes:
-          label: Pasos para reproducir
-          description: Enumera los pasos para reproducir el comportamiento
+          label: 🔄 Pasos para reproducir
+          description: Enumera los pasos exactos para reproducir el comportamiento
           placeholder: |
               1. Ir a '...'
               2. Click en '....'
               3. Scroll hasta '....'
-              4. Ver error
+              4. Ver error en '....'
       validations:
           required: true
 
     - type: textarea
       id: expected
       attributes:
-          label: Comportamiento esperado
+          label: ✅ Comportamiento esperado
           description: Describe qué esperabas que sucediera
+          placeholder: 'Debería haber...'
+      validations:
+          required: true
+
+    - type: dropdown
+      id: severity
+      attributes:
+          label: 🎯 Severidad
+          description: ¿Qué tan grave es este problema?
+          options:
+              - 🔴 Crítico (bloquea funcionalidad principal)
+              - 🟡 Alto (afecta severamente la usabilidad)
+              - 🟢 Medio (molesto pero hay workaround)
+              - ⚪ Bajo (cosmético)
       validations:
           required: true
 
     - type: dropdown
       id: browsers
       attributes:
-          label: ¿En qué navegadores ocurre?
+          label: 🌐 Navegadores afectados
           multiple: true
           options:
-              - Firefox
-              - Chrome
-              - Safari
-              - Microsoft Edge
-              - Opera
+              - 🦊 Firefox
+              - 🌐 Chrome
+              - 🧭 Safari
+              - 📱 Edge
+              - 🎭 Opera
+      validations:
+          required: true
 
     - type: input
       id: version
       attributes:
-          label: Versión
-          description: ¿Qué versión del software estás usando?
+          label: 📦 Versión
+          description: ¿Qué versión de DsIaui estás usando?
+          placeholder: 'v1.2.3'
       validations:
           required: true
 
     - type: textarea
       id: logs
       attributes:
-          label: Logs relevantes
-          description: Si aplica, incluye logs o mensajes de error
+          label: 📄 Logs y capturas
+          description: Incluye cualquier log, mensaje de error o captura de pantalla relevante
+          placeholder: |
+              ```
+              Error: Something went wrong...
+              ```
+              Puedes arrastrar y soltar imágenes aquí
           render: shell
+
+    - type: input
+      id: contact
+      attributes:
+          label: 📞 Información de contacto
+          description: ¿Cómo podemos contactarte si necesitamos más información?
+          placeholder: 'ej. email@example.com'
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          label: ✅ Verificación
+          options:
+              - label: He buscado en los issues existentes y no encontré un reporte similar
+                required: true
+              - label: He probado con la última versión disponible
+                required: true
+              - label: Puedo reproducir este error consistentemente
+                required: true

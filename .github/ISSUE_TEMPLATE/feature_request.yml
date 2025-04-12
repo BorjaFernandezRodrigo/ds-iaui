@@ -1,47 +1,75 @@
-name: 🚀 Feature Request
-description: Proponer nueva funcionalidad
-title: '[FEATURE]: '
+name: 🚀 Nueva Funcionalidad
+description: Proponer una mejora o nueva característica
+title: '[Feature]: '
 labels: ['enhancement']
 
 body:
     - type: markdown
       attributes:
           value: |
-              Gracias por proponer una nueva funcionalidad. Por favor, completa la siguiente información.
+              ### Gracias por reportar este bug. Por favor, completa la siguiente información.
+              ### Describe tu propuesta de mejora ✨
 
     - type: textarea
-      id: problem
+      id: description
       attributes:
-          label: Problema relacionado
-          description: ¿Esta funcionalidad está relacionada con algún problema? Descríbelo.
-          placeholder: 'Me frustra cuando...'
+          label: 📝 Descripción
+          description: ¿Qué funcionalidad te gustaría ver?
+          placeholder: Como usuario, me gustaría poder...
       validations:
           required: true
 
     - type: textarea
-      id: solution
+      id: why
       attributes:
-          label: Solución propuesta
-          description: Describe la solución que te gustaría
-          placeholder: 'Me gustaría que...'
+          label: 💡 Justificación
+          description: ¿Por qué sería útil esta funcionalidad?
+          placeholder: Esto ayudaría a...
       validations:
           required: true
-
-    - type: textarea
-      id: alternatives
-      attributes:
-          label: Alternativas consideradas
-          description: ¿Qué alternativas has considerado?
 
     - type: dropdown
       id: scope
       attributes:
-          label: Alcance
+          label: 🔍 Área
           options:
-              - Frontend
-              - Backend
-              - Base de datos
-              - Documentación
-              - Otro
+              - 📚 Documentación
+              - 🧪 Tests
+              - 🔒 Seguridad
+              - 🎭 UX/UI
       validations:
           required: true
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          label: ✅ Confirmación
+          options:
+              - label: He verificado que no existe una propuesta similar
+                required: true
+
+    - type: textarea
+      id: mockups
+      attributes:
+          label: 🎨 Mockups o ejemplos
+          description: Añade capturas, dibujos o enlaces que ayuden a entender la propuesta
+          placeholder: Puedes arrastrar y soltar imágenes aquíç
+
+    - type: input
+      id: contact
+      attributes:
+          label: 📞 Información de contacto
+          description: ¿Cómo podemos contactarte si necesitamos más información?
+          placeholder: 'ej. email@example.com'
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          label: 📝 Confirmación
+          options:
+              - label: He buscado en los issues existentes y no hay una propuesta similar
+                required: true
+              - label: He leído la guía de contribución
+                required: true
+              - label: Entiendo que esta es una propuesta y puede no ser implementada
+                required: true
