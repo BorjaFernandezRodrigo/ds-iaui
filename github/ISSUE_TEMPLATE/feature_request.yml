@@ -1,0 +1,47 @@
+name: 🚀 Feature Request
+description: Proponer nueva funcionalidad
+title: '[FEATURE]: '
+labels: ['enhancement']
+
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Gracias por proponer una nueva funcionalidad. Por favor, completa la siguiente información.
+
+    - type: textarea
+      id: problem
+      attributes:
+          label: Problema relacionado
+          description: ¿Esta funcionalidad está relacionada con algún problema? Descríbelo.
+          placeholder: 'Me frustra cuando...'
+      validations:
+          required: true
+
+    - type: textarea
+      id: solution
+      attributes:
+          label: Solución propuesta
+          description: Describe la solución que te gustaría
+          placeholder: 'Me gustaría que...'
+      validations:
+          required: true
+
+    - type: textarea
+      id: alternatives
+      attributes:
+          label: Alternativas consideradas
+          description: ¿Qué alternativas has considerado?
+
+    - type: dropdown
+      id: scope
+      attributes:
+          label: Alcance
+          options:
+              - Frontend
+              - Backend
+              - Base de datos
+              - Documentación
+              - Otro
+      validations:
+          required: true

@@ -1,0 +1,45 @@
+name: 🔧 Technical Debt
+description: Reportar deuda técnica
+title: '[TECH-DEBT]: '
+labels: ['technical-debt']
+assignees: ['dev-team']
+
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Use esta plantilla para reportar deuda técnica que necesita ser abordada.
+
+    - type: textarea
+      id: description
+      attributes:
+          label: Descripción
+          description: Describe el problema técnico
+          placeholder: 'El código actual tiene problemas con...'
+      validations:
+          required: true
+
+    - type: textarea
+      id: impact
+      attributes:
+          label: Impacto
+          description: ¿Qué impacto tiene este problema?
+      validations:
+          required: true
+
+    - type: dropdown
+      id: severity
+      attributes:
+          label: Severidad
+          options:
+              - Baja (puede esperar)
+              - Media (debería abordarse pronto)
+              - Alta (necesita atención inmediata)
+      validations:
+          required: true
+
+    - type: textarea
+      id: solution
+      attributes:
+          label: Solución propuesta
+          description: Si tienes una idea de cómo resolver esto, descríbela

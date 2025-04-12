@@ -1,0 +1,38 @@
+name: 📝 Documentation
+description: Mejoras en documentación
+title: '[DOCS]: '
+labels: ['documentation']
+
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Gracias por ayudar a mejorar nuestra documentación.
+
+    - type: dropdown
+      id: type
+      attributes:
+          label: Tipo de cambio
+          options:
+              - Nueva documentación
+              - Corrección de errores
+              - Actualización
+              - Traducción
+              - Otro
+      validations:
+          required: true
+
+    - type: textarea
+      id: description
+      attributes:
+          label: Descripción del cambio
+          description: Describe qué cambios propones en la documentación
+      validations:
+          required: true
+
+    - type: input
+      id: location
+      attributes:
+          label: Ubicación
+          description: ¿Dónde se encuentra la documentación que quieres modificar?
+          placeholder: 'docs/api/endpoints.md'

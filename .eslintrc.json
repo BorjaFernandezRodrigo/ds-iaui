@@ -1,0 +1,39 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "files": [
+    "./src/view/app/**/*.ts"
+  ],
+  "excludedFiles": [
+    "src/view/**/*.spec.ts"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended"
+  ],
+  "ignorePatterns": [
+    "dist/**"
+  ],
+  "plugins": [
+    "react-hooks",
+    "react-refresh",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react-refresh/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ]
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  }
+}

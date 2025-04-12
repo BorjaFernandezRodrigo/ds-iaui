@@ -1,0 +1,42 @@
+blank_issues_enabled: false
+contact_links:
+    - name: 📚 Documentación
+      url: https://docs.example.com
+      about: Consulta nuestra documentación antes de crear un issue
+
+    - name: 🤝 Guía de Contribución
+      url: https://github.com/BorjaFernandezRodrigo/ds-iaui/blob/master/CONTRIBUTING.md
+      about: Lee nuestra guía antes de contribuir
+
+    - name: 📧 Email del Equipo
+      url: mailto:borja.fernandez.rodrigo@gmail.com
+      about: Contáctanos por email para asuntos importantes
+
+templates:
+    - name: 🐛 Bug Report
+      description: Reportar un error o problema
+      title: '[BUG]: '
+      labels: ['bug', 'triage']
+      assignees: ['tech-lead']
+
+    - name: 🚀 Feature Request
+      description: Proponer nueva funcionalidad
+      title: '[FEATURE]: '
+      labels: ['enhancement']
+
+    - name: 📝 Documentation
+      description: Mejoras en documentación
+      title: '[DOCS]: '
+      labels: ['documentation']
+
+    - name: 🔧 Technical Debt
+      description: Reportar deuda técnica
+      title: '[TECH-DEBT]: '
+      labels: ['technical-debt']
+      assignees: ['dev-team']
+pull_request_template:
+    name: 📝 Pull Request
+    description: Template para pull requests
+    assignees: ['BorjaFernandezRodrigo']
+    labels: ['needs-review']
+    template_path: '.github/PULL_REQUEST_TEMPLATE/pull_request_template.md'
